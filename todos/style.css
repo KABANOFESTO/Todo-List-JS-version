@@ -1,5 +1,5 @@
 body {
-    background: #352f5b;
+    background: #103440;
 }
 
 .container {
@@ -16,9 +16,14 @@ input[type=text]:focus {
 }
 
 .todos li {
-    background: #423a6f;
+    background: #113b49;
+    ;
 }
 
 .delete {
     cursor: pointer;
+}
+
+.filtered {
+    display: none !important;
 }

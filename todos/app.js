@@ -37,10 +37,15 @@ list.addEventListener('click', e => {
 });
 
 const filtertodos = requires => {
-    console.log(requires);
-}
+    Array.from(list.children)
+        .filter((todo) => !todo.textContent.toLowerCase().includes(requires))
+        .forEach((todo) => todo.classList.add('filtered'));
 
+    Array.from(list.children)
+        .filter((todo) => todo.textContent.toLowerCase().includes(requires))
+        .forEach((todo) => todo.classList.remove('filtered'));
+}
 search.addEventListener('keyup', () => {
-    const requires = search.value.trim();
+    const requires = search.value.trim().toLowerCase();
     filtertodos(requires);
-})
+});
